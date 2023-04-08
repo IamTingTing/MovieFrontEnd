@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE8A3C4-A34E-4D7A-BD47-F7F4C80E5C5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MovieFrontEnd</RootNamespace>
+    <AssemblyName>MovieFrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Actor.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cmt_ImageList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CnQ.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CnQStatusList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CnQType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CouponList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CouponType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCardType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Director.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comment_FrmComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comment_FrmComplaint.designer.cs">
+      <DependentUpon>Comment_FrmComplaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comment_FrmMovieCmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comment_FrmMovieCmt.designer.cs">
+      <DependentUpon>Comment_FrmMovieCmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie_MovieFron_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movie_MovieFron_01.designer.cs">
+      <DependentUpon>Movie_MovieFron_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie_MovieFron_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movie_MovieFron_02.designer.cs">
+      <DependentUpon>Movie_MovieFron_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member_LogIn_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member_LogIn_Register.designer.cs">
+      <DependentUpon>Member_LogIn_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member_Main.designer.cs">
+      <DependentUpon>Member_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_MemberOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_MemberOrder.designer.cs">
+      <DependentUpon>Order_MemberOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_MemberOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_MemberOrderDetails.designer.cs">
+      <DependentUpon>Order_MemberOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Seat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Seat.designer.cs">
+      <DependentUpon>Order_Seat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Frm小賣部.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_Frm小賣部.designer.cs">
+      <DependentUpon>Product_Frm小賣部.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hashtag.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Image.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImageList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberAction.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Membership.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Movie.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieActorsList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieCmt.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieCmt_Hash.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieCountriesList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieDirectorsList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieImagesList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieLanguagesList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovieModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRating.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovieTypesList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatu.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusLog.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Booking.designer.cs">
+      <DependentUpon>Order_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PlayTimeDetail.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsType.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDetail.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reply.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Seat.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeatStatu.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Series.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Coupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Coupon.designer.cs">
+      <DependentUpon>UserControl_Coupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Favorite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Favorite.designer.cs">
+      <DependentUpon>UserControl_Favorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_ShortCmt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_ShortCmt.Designer.cs">
+      <DependentUpon>UserControl_ShortCmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_StarRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_StarRate.Designer.cs">
+      <DependentUpon>UserControl_StarRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusList.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Theater.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TheaterClass.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketClass.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>MovieModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_MemberOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_MemberOrder.designer.cs">
+      <DependentUpon>UserControl_MemberOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_MemberOrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_MemberOrderDetails.designer.cs">
+      <DependentUpon>UserControl_MemberOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Comment_FrmComplaint.resx">
+      <DependentUpon>Comment_FrmComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comment_FrmMovieCmt.resx">
+      <DependentUpon>Comment_FrmMovieCmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie_MovieFron_01.resx">
+      <DependentUpon>Movie_MovieFron_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie_MovieFron_02.resx">
+      <DependentUpon>Movie_MovieFron_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member_LogIn_Register.resx">
+      <DependentUpon>Member_LogIn_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member_Main.resx">
+      <DependentUpon>Member_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_MemberOrder.resx">
+      <DependentUpon>Order_MemberOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_MemberOrderDetails.resx">
+      <DependentUpon>Order_MemberOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Seat.resx">
+      <DependentUpon>Order_Seat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_Frm小賣部.resx">
+      <DependentUpon>Product_Frm小賣部.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Booking.resx">
+      <DependentUpon>Order_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl_Coupon.resx">
+      <DependentUpon>UserControl_Coupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Favorite.resx">
+      <DependentUpon>UserControl_Favorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_ShortCmt.resx">
+      <DependentUpon>UserControl_ShortCmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_StarRate.resx">
+      <DependentUpon>UserControl_StarRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_MemberOrder.resx">
+      <DependentUpon>UserControl_MemberOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_MemberOrderDetails.resx">
+      <DependentUpon>UserControl_MemberOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="MovieModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MovieModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MovieModel.edmx.diagram">
+      <DependentUpon>MovieModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MovieModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MovieModel.Context.cs</LastGenOutput>
+      <DependentUpon>MovieModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="MovieModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MovieModel.edmx</DependentUpon>
+      <LastGenOutput>MovieModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\StarHalfBlue.png" />
+    <None Include="Resources\StarHalf.png" />
+    <None Include="Resources\StarFullBlue.png" />
+    <None Include="Resources\StarFull.png" />
+    <None Include="Resources\StarEmptyBlue.png" />
+    <None Include="Resources\StarEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
